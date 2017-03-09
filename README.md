@@ -1,2 +1,2 @@
 # Python_Project
-CS244_Course
+CS241 and CS244_Courses
