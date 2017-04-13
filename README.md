@@ -17,7 +17,7 @@ ranging from web browsing to document writing are operated as usual. These train
 validation can be found in the “Training_Data_Master” and “Validation_Data_Master”
 folders, respectively.
 
-Assignment Task:
+Assignment Task(Simplified):
 1) Split the Attack data of each category (Hydra-FTP, Hydra-SSH, Adduser, Java-Meterpreter,
 Meterpreter and Webshell ) into 70% training data and 30 % test data. For instance there are
 are 10 folders in “Adduser” attack. Therefore, 7 of these folders are to be used for training
@@ -26,63 +26,11 @@ and 3 folders are to be used for testing.
 and files in “Validation_Data_Master” folder are to be used as test data.
 3) Write a python script to find the frequency of occurences of all unique 3-grams, 5-grams
 and 7-grams system call sequences in the training data for both Attack data (across all
-categories of attack) and Normal data. For e.g., consider the following trace file
-corresponding to the Adduser attack.
-265 168 168 265 168 168 168 265 168 265 168 168 . . .
-Your script to list all 3-grams should produce the following output:
-265 168 168 -->3
-168 168 265 -->2
-168 265 168 -->3
-168 168 168 -->1
-265 168 265 -->1
+categories of attack) and Normal data. 
 4) Perform the same task on files in the “Training_Data_Master” to obtain all the unique 3-
 grams, 5-grams and 7-grams.
 5) Once you have obtained the frequencies of all the unique n-grams terms in the training data,
-use the top 30% n-grams terms with the highest frequency to create a data set. For instance
-consider following results for Adduser data (1st File):
-('240', '102', '221') 7
-('204', '203', '5') 2
-('195', '199', '60') 1
-('5', '197', '45') 1
-('5', '195', '5') 12
-('6', '220', '4') 1
-('191', '5', '133') 9
-('13', '45', '5') 2
-('60', '5', '197') 4
-('3', '142', '7') 2
-Hydra-FTP data (2nd File):
-('3', '142', '7') 11
-('219', '311', '240') 4
-('240', '13', '240') 1
-('33', '168', '146') 2
-('6', '168', '102') 3
-('5', '197', '45') 1
-('5', '195', '5') 2
-('3', '91', '5') 8
-('42', '120', '197') 1
-('174', '54', '5') 2
-('6', '63', '6') 18
-Normal training data (3rd File):
-('195', '10', '41') 1
-('3', '142', '7') 3
-('91', '240', '196') 2
-('5', '195', '5') 2
-('3', '102', '7') 17
-('3', '195', '195') 14
-('4', '78', '240') 1
-('33', '195', '192') 2
-('5', '197', '45') 15
-('199', '45', '192') 1
-The top 30 % 3-grams terms with highest frequencies in Adduser, Hydra-FTP and Normal
-data are [('5', '195', '5'), ('191', '5', '133'), ('240', '102', '221')], [('6', '63', '6'), ('3', '142', '7'), ('3', '91',
-'5')] and [('3', '102', '7'), ('5', '197', '45'), ('3', '195', '195')], respectively. Designate ('5', '195', '5') as
-feature 1(F1), ('191', '5', '133') as feature 2 (F2) ..... and ('3', '195', '195') as F9. Then, the generated
-dataset should have 9 features and one class label ( Adduser, Hydra-FTP, Normal ) with each feature
-corresponding to frequency of occurences of one of these 9 features. For instance for the 1st File,
-the generated data should be
-Freq of F1, Freq of F2, ...., Freq of F9 ----->12, 9, 7, 0, 2, 0, 0,1,0, Adduser
-Freq of F1, Freq of F2, ...., Freq of F9 ----->2, 0, 0, 0, 3, 0, 17,15,14, Normal
-This will be the final training data which will be used to train various classifiers.
+use the top 30% n-grams terms with the highest frequency to create a data set
 6) Apply the same procedure to generate the test dataset from the test files of the attack data
 (for all attack types) and the normal files in the “Validation_Data_Master” using the top
 30% 3-grams terms with highest frequencies obtained during the training phase. The
