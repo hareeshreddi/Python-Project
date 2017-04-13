@@ -1,2 +1,2 @@
-# Python_Project
-CS241 and CS244_Courses
+# Python-Project
+Part of CS241 and CS244 Courses in my Engineering 2nd Year at IIT Guwahati
