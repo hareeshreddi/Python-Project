@@ -1,7 +1,6 @@
 # Python-Project
 Part of CS241 and CS244 Courses in my Engineering 2nd Year at IIT Guwahati.
 Description of Australian Defence Force Academy-Linux Dataset (ADFA-LD) :
-Description of Australian Defence Force Academy-Linux Dataset (ADFA-LD) :
 1) The dataset was generated on Linux local server running on Ubuntu 11.04, offering a variety
 of functions such as file sharing, database, remote access and web server.
 2) Six types of attacks occur in ADFA-LD including two brute force password guessing
@@ -17,6 +16,7 @@ period during which no attacks occur against the host and legitimate application
 ranging from web browsing to document writing are operated as usual. These training and
 validation can be found in the “Training_Data_Master” and “Validation_Data_Master”
 folders, respectively.
+
 Assignment Task:
 1) Split the Attack data of each category (Hydra-FTP, Hydra-SSH, Adduser, Java-Meterpreter,
 Meterpreter and Webshell ) into 70% training data and 30 % test data. For instance there are
@@ -35,9 +35,6 @@ Your script to list all 3-grams should produce the following output:
 168 265 168 -->3
 168 168 168 -->1
 265 168 265 -->1
-NOTE: To save time you can concatenate your entire training file for a particular class of
-attack and then run your script on the concatenated file instead of running it individually on
-each file.
 4) Perform the same task on files in the “Training_Data_Master” to obtain all the unique 3-
 grams, 5-grams and 7-grams.
 5) Once you have obtained the frequencies of all the unique n-grams terms in the training data,
@@ -91,5 +88,3 @@ This will be the final training data which will be used to train various classif
 30% 3-grams terms with highest frequencies obtained during the training phase. The
 classifier model developed during the training phase will finally be validated on the Test
 dataset.
-NOTE : You can refer the paper availabe at http://ieeexplore.ieee.org/stamp/stamp.jsp?
-arnumber=6743952 for further reference on ADFA-LD dataset.
